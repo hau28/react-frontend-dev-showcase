@@ -1,23 +1,40 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { toggleTodo } from "../../redux/todoList/actions/todos";
-import { Line, Row, Strikeable } from "../Styled";
+import { removeTodo, toggleTodo } from "../../redux/todoList/actions/todos";
+import { IconButton, Line, Row, Strikeable, TagContainer } from "../Styled";
 import CheckBox from "./CheckBox";
+import Tag from "../TodoList/Tag";
+import { DeleteOutlined } from "@ant-design/icons";
 
 export default function TodoItem({ todoObj }) {
   const dispatch = useDispatch();
-  const { id, todo, tags, priority, createdTime, checked } = todoObj;
-  function handleClick() {
-    // console.log(id);
+  const { id, todo, tags, createdTime, checked } = todoObj;
+  function handleToggle() {
     dispatch(toggleTodo(id));
+  }
+  function handleRemove() {
+    dispatch(removeTodo(id));
   }
   return (
     <div style={{ flex: 1 }}>
-      <Row alignItems="center" padding="0.75rem 0 0 0" margin="0 0 0.5rem 0">
+      <Row
+        justifyContent="space-between"
+        padding="0.75rem 0 0 0"
+        margin="0 0 0.5rem 0"
+      >
         <Row>
-          <CheckBox checked={checked} onClick={handleClick} />
+          <CheckBox checked={checked} onClick={handleToggle} />
           <Strikeable strike={checked}>{todo}</Strikeable>
         </Row>
+        <IconButton hoverColor="red" onClick={handleRemove}>
+          <DeleteOutlined />
+        </IconButton>
+      </Row>
+      <Row>
+        <div style={{ width: "1.75rem" }} />
+        {tags.map((tag) => (
+          <Tag title={tag} lock key={tag} />
+        ))}
       </Row>
       <Row>
         <div style={{ width: "1.75rem" }} />

@@ -152,6 +152,22 @@ export const Line = styled.div`
 `;
 
 export const Strikeable = styled.span`
+  overflow-wrap: break-word;
+  overflow-x: visible;
   text-decoration: ${(props) => props.strike && "line-through"};
   opacity: ${(props) => props.strike && 0.25};
+`;
+
+export const IconButton = styled.button`
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2 ease;
+  padding: 0;
+  font-size: 1rem;
+  &:hover {
+    opacity: 0.5;
+    color: ${(props) => props.hoverColor || "auto"};
+  }
 `;

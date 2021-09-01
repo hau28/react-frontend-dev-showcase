@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
 
 import todos from "./todos";
-import allTags from "./allTags";
 
-const todoListReducer = combineReducers({ todos, allTags });
+const todoListReducer = combineReducers({ todos });
 
 export default todoListReducer;

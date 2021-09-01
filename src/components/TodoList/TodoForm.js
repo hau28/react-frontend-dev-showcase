@@ -39,6 +39,13 @@ export default function TodoForm() {
     }
   }
 
+  function handleEnterTodo(e) {
+    if (e.key === "Enter" || e.keyCode === 13) {
+      e.preventDefault();
+      handleSubmit(e);
+    }
+  }
+
   function handleDeleteTag(title) {
     setTags((prev) => prev.filter((tag) => tag !== title));
   }
@@ -56,6 +63,7 @@ export default function TodoForm() {
         placeholder="Add new todo"
         onChange={handleChangeInput}
         required
+        onKeyPress={handleEnterTodo}
       />
       <Row>
         <OutlinedBox>

@@ -1,20 +1,15 @@
-function id() {
-  let value = -1;
-  return {
-    get: function () {
-      value++;
-      return value;
-    },
-  };
-}
+let nextId = 0;
 
 export default function todos(todos = [], action) {
-  const idGenerator = id();
   switch (action.type) {
     case "ADD":
       return [
         ...todos,
-        { ...action.payload, createdTime: new Date(), id: todos.length },
+        {
+          ...action.payload,
+          createdTime: new Date(),
+          id: nextId++,
+        },
       ];
 
     case "UPDATE":
