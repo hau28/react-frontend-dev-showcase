@@ -2,23 +2,24 @@ import styled from "styled-components";
 import { colorPalette } from "../constants/theme";
 
 export const FullScreenContainer = styled.div`
-  min-height: 100vh;
+  height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
   background-color: whitesmoke;
+  padding: 2rem 1rem;
+  align-items: center;
+  overflow-x: hidden;
 `;
 
 export const FullscreenPaper = styled.section`
   flex: 1;
   max-width: 600px;
-  padding: 1rem 2rem;
-  align-self: center;
   width: 100%;
-  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   background-color: white;
   align-items: stretch;
+  padding: 1rem 2rem;
 `;
 
 export const Heading1 = styled.h1`
