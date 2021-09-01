@@ -6,10 +6,9 @@ A project to practice React and other front-end libraries.
 
 ### 31/8/2021
 
-- Init project using `reate-react-app`
+- Init project using **`reate-react-app`**
 
+### 1/9/2021
 
-# To-do
-
-- [x] Init project
-- [ ] To-do list 
+- Implement simple todo list
+- Using **React Hooks, Redux, `styled-components`**
