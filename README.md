@@ -16,4 +16,4 @@ A project to practice React and other front-end libraries.
 ### 6/9/2021
 - Implement Homepage
 - Implement Flexbox Page
-- Using React Bootstrap
+- Using **React Bootstrap**
