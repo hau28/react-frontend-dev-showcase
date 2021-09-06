@@ -8,19 +8,22 @@ import {
   FullscreenPaper,
   Heading1,
 } from "../components/Styled";
+import NavbarWrapper from "../components/NavbarWrapper";
 
 const todoListStore = createStore(todoListReducer);
 
 export default function TodoPage() {
   return (
     <Provider store={todoListStore}>
-      <FullScreenContainer>
-        <FullscreenPaper>
-          <Heading1 textAlign="center">Simple Todo List</Heading1>
-          <TodoForm />
-          <TodoList />
-        </FullscreenPaper>
-      </FullScreenContainer>
+      <NavbarWrapper>
+        <FullScreenContainer>
+          <FullscreenPaper>
+            <Heading1 textAlign="center">Simple Todo List</Heading1>
+            <TodoForm />
+            <TodoList />
+          </FullscreenPaper>
+        </FullScreenContainer>
+      </NavbarWrapper>
     </Provider>
   );
 }

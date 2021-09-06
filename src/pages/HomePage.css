@@ -1,0 +1,9 @@
+.homepage-bg-container {
+  text-align: center;
+  word-wrap: break-word;
+  margin-bottom: 3rem;
+}
+
+.card-list {
+  transform: translateY(-50px);
+}

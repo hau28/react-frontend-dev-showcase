@@ -16,7 +16,7 @@ export default function TodoItem({ todoObj }) {
     dispatch(removeTodo(id));
   }
   return (
-    <div style={{ flex: 1 }}>
+    <div>
       <Row
         justifyContent="space-between"
         padding="0.75rem 0 0 0"
@@ -31,7 +31,6 @@ export default function TodoItem({ todoObj }) {
         </IconButton>
       </Row>
       <Row>
-        <div style={{ width: "1.75rem" }} />
         {tags.map((tag) => (
           <Tag title={tag} lock key={tag} />
         ))}

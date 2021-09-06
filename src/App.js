@@ -4,18 +4,24 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { Provider } from "react-redux";
 import HomePage from "./pages/HomePage";
+import FlexboxPage from "./pages/FlexboxPage";
 import TodoPage from "./pages/TodoPage";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/todo">
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/todo">
           <TodoPage />
         </Route>
-        <Redirect to="/todo" />
+        <Route path="/flexbox">
+          <FlexboxPage />
+        </Route>
+        <Redirect to="/" />
       </Switch>
     </Router>
   );

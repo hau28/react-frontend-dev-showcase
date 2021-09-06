@@ -1,0 +1,15 @@
+.navbar {
+  border-bottom: gainsboro solid 1px;
+}
+
+.card-img {
+  object-fit: cover;
+  height: 440px;
+  margin-top: -1px;
+}
+
+@media screen and (min-width: 1200px) {
+  .card-list {
+    padding: 0 10rem;
+  }
+}

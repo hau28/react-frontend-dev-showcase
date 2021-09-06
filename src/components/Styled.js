@@ -2,24 +2,22 @@ import styled from "styled-components";
 import { colorPalette } from "../constants/theme";
 
 export const FullScreenContainer = styled.div`
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
-  background-color: whitesmoke;
   padding: 2rem 1rem;
   align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 
-export const FullscreenPaper = styled.section`
+export const FullscreenPaper = styled.div`
   flex: 1;
   max-width: 600px;
   width: 100%;
-  display: flex;
   flex-direction: column;
   background-color: white;
   align-items: stretch;
-  padding: 1rem 2rem;
+  overflow: hidden;
 `;
 
 export const Heading1 = styled.h1`
@@ -35,6 +33,7 @@ export const Heading2 = styled.h2`
   font-weight: 600;
   margin: 1rem 0 0.5rem 0;
   text-align: ${(props) => props.textAlign || "auto"};
+  color: ${(props) => props.color};
 `;
 
 export const Form = styled.form`
@@ -61,7 +60,7 @@ export const Input = styled.input`
 `;
 
 export const OutlinedBox = styled.div`
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
   border: solid;
   border-width: 2px;
   border-color: ${colorPalette.darkWhitesmoke};
@@ -69,7 +68,8 @@ export const OutlinedBox = styled.div`
   font-size: 0.8rem;
   align-items: center;
   flex: 1;
-  overflow: auto;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 `;
 
 export const PlainInput = styled.input`
@@ -88,13 +88,14 @@ export const Row = styled.div`
   justify-content: ${(props) => props.justifyContent};
   margin: ${(props) => props.margin || "0 0 0 0"};
   padding: ${(props) => props.padding || "0 0 0 0"};
+  flex-wrap: wrap;
 `;
 
 export const Button = styled.button`
-  background-color: ${colorPalette.black};
+  background-color: ${colorPalette.blue};
   color: white;
   padding: 0.25rem 0.5rem;
-  border: solid 2px ${colorPalette.black};
+  border: solid 2px ${colorPalette.blue};
   margin-right: 0.25rem;
   display: flex;
   align-items: center;
@@ -108,19 +109,20 @@ export const Button = styled.button`
   padding: ${(props) => props.padding};
   &:hover {
     background-color: white;
-    color: ${colorPalette.black};
+    color: ${colorPalette.blue};
   }
   &:focus {
     background-color: white;
-    color: ${colorPalette.black};
+    color: ${colorPalette.blue};
   }
 `;
 
 export const TagContainer = styled(Button)`
   padding: 0.25rem 0.5rem;
-  border: solid 1px ${colorPalette.black};
+  border: solid 1px ${colorPalette.blue};
   border-radius: 0.25rem;
   margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
   font-weight: 400;
 `;
 
@@ -170,4 +172,33 @@ export const IconButton = styled.button`
     opacity: 0.5;
     color: ${(props) => props.hoverColor || "auto"};
   }
+`;
+
+export const HomePageBG = styled.div`
+  background-image: url("https://i.ibb.co/Lp8t2bg/baptiste-q-CPD-TO0-Uv-Q-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 56px);
+`;
+
+export const BigTitle = styled(Heading1)`
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 6rem;
+  color: ${(props) => props.color || colorPalette.black};
+`;
+
+export const FlexDiv = styled.div`
+  display: flex;
+  flex-direction: ${(props) => props.flexDirection};
+  flex-wrap: ${(props) => props.flexWrap};
+`;
+
+export const SquareDiv = styled.div`
+  flex-grow: ${(props) => props.flexGrow};
 `;

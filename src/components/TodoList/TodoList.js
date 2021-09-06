@@ -11,10 +11,17 @@ export default function TodoList() {
         flex: 1,
         display: "flex",
         flexDirection: "column",
+        overflow: "hidden",
       }}
     >
       <Heading2>Your todos</Heading2>
-      <div style={{ flex: 1, overflow: "visible" }}>
+      <div
+        style={{
+          overflow: "auto",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         {todoList.map((todo) =>
           todo.checked ? null : <TodoItem key={todo.id} todoObj={todo} />
         )}
