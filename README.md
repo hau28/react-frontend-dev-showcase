@@ -10,10 +10,14 @@ A project to practice React and other front-end libraries.
 
 ### 1/9/2021
 
-- Implement simple todo list
+- Implemented simple todo list
 - Using **React Hooks, Redux, `styled-components`**
 
 ### 6/9/2021
-- Implement Homepage
-- Implement Flexbox Page
+- Implemented Homepage
+- Started working on Flexbox Page
 - Using **React Bootstrap**
+
+### 6/9/2021
+- Implemented Flexbox Page
+- Using **Custom Hook**
