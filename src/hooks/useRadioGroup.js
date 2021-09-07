@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ButtonGroup, ToggleButton } from "react-bootstrap";
 
-export default function useRadioGroup(id, values) {
-  const [value, setValue] = useState(values[0]);
+export default function useRadioGroup(id, values, init) {
+  const [value, setValue] = useState(values[init || 0]);
   const handleChange = (e) => {
     console.log(e.target.value);
     setValue(e.target.value);

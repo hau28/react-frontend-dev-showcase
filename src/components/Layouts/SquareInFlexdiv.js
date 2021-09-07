@@ -15,18 +15,22 @@ export default function SquareInFlexdiv(props) {
     }
   }, [props.num]);
   const handleSelect = (num) => {
-    setSelected(num);
+    if (props.selectable) {
+      setSelected(num);
+    }
   };
 
   return (
-    <FlexDiv {...props}>
+    <FlexDiv {...props.divStyle}>
       {NUMS.map((num) => (
         <Square
           setSelected={setSelected}
           selected={props.selectable ? num === selected : false}
           num={num}
           style={
-            num === selected ? props.selectedSquareStyle : props.squareStyle
+            props.selectable && num === selected
+              ? props.selectedSquareStyle
+              : props.squareStyle
           }
           selectable={props.selectable}
           onSelect={handleSelect}

@@ -197,8 +197,22 @@ export const FlexDiv = styled.div`
   display: flex;
   flex-direction: ${(props) => props.flexDirection};
   flex-wrap: ${(props) => props.flexWrap};
+  justify-content: ${(props) => props.justifyContent};
+  align-items: ${(props) => props.alignItems};
+  background-color: ${(props) => props.backgroundColor};
+  width: ${(props) => props.width};
+  border: ${(props) => props.border};
+  min-height: ${(props) => props.minHeight};
 `;
 
 export const SquareDiv = styled.div`
   flex-grow: ${(props) => props.flexGrow};
+  flex-shrink: ${(props) => props.flexShrink};
+  flex-basis: ${(props) => props.flexBasis};
+  min-width: ${(props) => props.minWidth || "50px"};
+  min-height: ${(props) => props.minHeight || "50px"};
+  flex: ${(props) => props.flex};
+  margin: ${(props) => props.margin || "0 0.5rem 0.5rem 0"};
+  align-items: ${(props) => props.alignItems};
+  align-self: ${(props) => props.alignSelf};
 `;

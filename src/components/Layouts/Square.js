@@ -4,19 +4,21 @@ import { SquareDiv } from "../Styled";
 export default function Square({ selected, num, style, selectable, onSelect }) {
   const primColor = selected ? colorPalette.green : colorPalette.red;
   const smokeColor = selected ? colorPalette.lightGreen : colorPalette.lightRed;
+  const randomAlign = () => {
+    const ALIGNS = ["flex-start", "flex-end", "center"];
+    const ranNum = Math.floor(Math.random() * 2);
+    return ALIGNS[ranNum];
+  };
   return (
     <SquareDiv
       onClick={() => onSelect(num)}
       {...style}
       style={{
-        minWidth: 50,
-        minHeight: 50,
         border: `2px solid ${primColor}`,
         display: "flex",
-        alignItems: "center",
+        alignItems: style?.randomAlign ? randomAlign() : "center",
         justifyContent: "center",
         backgroundColor: smokeColor,
-        margin: "0 0.5rem 0.5rem 0 ",
         cursor: selectable ? "pointer" : "auto",
       }}
     >
