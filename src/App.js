@@ -7,6 +7,7 @@ import {
 import HomePage from "./pages/HomePage";
 import FlexboxPage from "./pages/FlexboxPage";
 import TodoPage from "./pages/TodoPage";
+import GridPage from "./pages/GridPage";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/flexbox">
           <FlexboxPage />
+        </Route>
+        <Route path="/grid">
+          <GridPage />
         </Route>
         <Redirect to="/" />
       </Switch>

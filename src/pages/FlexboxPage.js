@@ -1,11 +1,11 @@
 import { BigTitle, Heading1, OutlinedBox } from "../components/Styled";
-import NavbarWrapper from "../components/NavbarWrapper";
+import PageStructure from "../components/PageStructure";
 import { Col, Container, Row } from "react-bootstrap";
 import * as flexboxComponents from "../components/Layouts/Flexbox";
 
 export default function FlexboxPage() {
   return (
-    <NavbarWrapper>
+    <PageStructure>
       <Container>
         <BigTitle>Flexbox</BigTitle>
         <Row>
@@ -14,6 +14,6 @@ export default function FlexboxPage() {
           ))}
         </Row>
       </Container>
-    </NavbarWrapper>
+    </PageStructure>
   );
 }
