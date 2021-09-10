@@ -5,10 +5,10 @@ export function addTodo(newTodo) {
   };
 }
 
-export function updateTodo(todoId) {
+export function updateTodo(editedTodo) {
   return {
     type: "UPDATE",
-    payload: todoId,
+    payload: editedTodo,
   };
 }
 

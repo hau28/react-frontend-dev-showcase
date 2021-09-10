@@ -69,7 +69,7 @@ export const OutlinedBox = styled.div`
   align-items: center;
   flex: 1;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: ${(props) => props.marginBottom || "1rem"};
 `;
 
 export const PlainInput = styled.input`
@@ -77,7 +77,7 @@ export const PlainInput = styled.input`
   outline: none;
   flex: 1;
   margin-top: 2px;
-  padding: 4px 0;
+  padding: 0 0 4px 0;
 `;
 
 export const Row = styled.div`
@@ -168,6 +168,7 @@ export const IconButton = styled.button`
   transition: opacity 0.2 ease;
   padding: 0;
   font-size: 1rem;
+  margin: ${(props) => props.margin};
   &:hover {
     opacity: 0.5;
     color: ${(props) => props.hoverColor || "auto"};

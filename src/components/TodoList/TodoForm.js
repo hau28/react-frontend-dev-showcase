@@ -66,7 +66,7 @@ export default function TodoForm() {
         onKeyPress={handleEnterTodo}
       />
       <Row>
-        <OutlinedBox>
+        <OutlinedBox marginBottom="0">
           {tags.map((tag) => (
             <Tag title={tag} key={tag} onClick={handleDeleteTag} />
           ))}

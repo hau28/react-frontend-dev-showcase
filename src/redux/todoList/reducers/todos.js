@@ -13,9 +13,9 @@ export default function todos(todos = [], action) {
       ];
 
     case "UPDATE":
-      const { todoId, field, newValue } = action.payload;
+      const { todoId, ...fields } = action.payload;
       return todos.map((todo) =>
-        todo.id === todoId ? { ...todo, [field]: newValue } : todo
+        todo.id === todoId ? { ...todo, ...fields } : todo
       );
 
     case "TOGGLE":

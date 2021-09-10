@@ -26,7 +26,7 @@ const CARDS = [
   },
   {
     title: "Sass Practice",
-    desc: "Simple page to practice Sass.",
+    desc: "Simple pricing page to practice Sass.",
     imgSrc:
       "https://og-image-react-egghead.now.sh/topic/scss?orientation=landscape&v=20201104",
     href: "/sass",
