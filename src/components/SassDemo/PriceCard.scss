@@ -1,0 +1,72 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.price-card {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  flex: 1;
+  &.center-card {
+    z-index: 1;
+    @include theme(dark);
+    padding: 3rem 2rem;
+    @include lg() {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+}
+
+.plan-title {
+  @include text-center;
+}
+
+.price {
+  @include text-center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.feat-list {
+  @include text-center;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1.2rem;
+}
+
+.feat-text {
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.divider {
+  height: 0.1em;
+  background-color: whitesmoke;
+  margin-bottom: 1rem;
+  &.center-card {
+    opacity: 0.2;
+  }
+}
+
+.more-button {
+  border-radius: 0.5rem;
+  border: solid 2px $purple;
+  width: 100%;
+  padding: 1rem;
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+  color: white;
+  background-color: $purple;
+  &.center-card {
+    background-color: white;
+    color: $purple;
+    border: solid 2px white;
+    &:hover {
+      color: white;
+    }
+  }
+  &:hover {
+    background-color: transparent;
+    color: $purple;
+  }
+}

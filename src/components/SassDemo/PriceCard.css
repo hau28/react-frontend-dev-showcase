@@ -1,0 +1,82 @@
+.price-card {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.price-card.center-card {
+  z-index: 1;
+  background-color: #7b86f3;
+  color: white;
+  padding: 3rem 2rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .price-card.center-card {
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
+.plan-title {
+  text-align: center;
+}
+
+.price {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.feat-list {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1.2rem;
+}
+
+.feat-text {
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.divider {
+  height: 0.1em;
+  background-color: whitesmoke;
+  margin-bottom: 1rem;
+}
+
+.divider.center-card {
+  opacity: 0.2;
+}
+
+.more-button {
+  border-radius: 0.5rem;
+  border: solid 2px #7b86f3;
+  width: 100%;
+  padding: 1rem;
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+  color: white;
+  background-color: #7b86f3;
+}
+
+.more-button.center-card {
+  background-color: white;
+  color: #7b86f3;
+  border: solid 2px white;
+}
+
+.more-button.center-card:hover {
+  color: white;
+}
+
+.more-button:hover {
+  background-color: transparent;
+  color: #7b86f3;
+}
+/*# sourceMappingURL=PriceCard.css.map */

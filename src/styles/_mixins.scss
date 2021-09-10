@@ -1,0 +1,21 @@
+@import "./variables";
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin theme($type: light, $prim-color: $purple, $sec-color: white) {
+  @if $type == dark {
+    background-color: $prim-color;
+    color: $sec-color;
+  } @else {
+    color: $prim-color;
+    background-color: $sec-color;
+  }
+}
+
+@mixin lg() {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}

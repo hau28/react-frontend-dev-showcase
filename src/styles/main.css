@@ -1,0 +1,45 @@
+.footer {
+  padding: 2rem 2rem 1.5rem 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer .footer-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.footer .github {
+  color: black;
+  text-decoration: none;
+}
+
+.footer .github:hover {
+  color: #3b82f6;
+}
+
+.footer .footer-left {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer .footer-left {
+    text-align: left;
+    max-width: 576px;
+    margin-bottom: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

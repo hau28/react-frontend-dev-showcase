@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./mixins";
+
+main.sass-page {
+  background-color: $purple-smoke;
+  .container {
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 58px);
+  }
+  h1 {
+    @include text-center;
+  }
+  .desc {
+    @include text-center;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .price-cards-row {
+    margin-top: 2rem;
+    align-items: center;
+    @include lg() {
+      display: flex;
+      flex: 3;
+    }
+  }
+}

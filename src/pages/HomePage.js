@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
 import { HomePageCard } from "../components/Card";
-import PageStructure from "../components/PageStructure";
+import MainLayout from "../components/MainLayout";
 import { BigTitle, Heading2, HomePageBG } from "../components/Styled";
-import "./HomePage.css";
+import "../styles/HomePage.css";
 
 const CARDS = [
   {
@@ -24,11 +24,18 @@ const CARDS = [
     imgSrc: "https://itechzo.com/wp-content/uploads/2019/11/bootstrap.png",
     href: "/grid",
   },
+  {
+    title: "Sass Practice",
+    desc: "Simple page to practice Sass.",
+    imgSrc:
+      "https://og-image-react-egghead.now.sh/topic/scss?orientation=landscape&v=20201104",
+    href: "/sass",
+  },
 ];
 
 export default function HomePage() {
   return (
-    <PageStructure>
+    <MainLayout>
       <HomePageBG>
         <Container className="homepage-bg-container">
           <BigTitle color="white">Hello</BigTitle>
@@ -42,6 +49,6 @@ export default function HomePage() {
           ))}
         </div>
       </Container>
-    </PageStructure>
+    </MainLayout>
   );
 }

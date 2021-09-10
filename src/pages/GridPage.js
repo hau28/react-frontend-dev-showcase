@@ -1,13 +1,11 @@
 import { BigTitle, Heading1 } from "../components/Styled";
-import PageStructure from "../components/PageStructure";
+import MainLayout from "../components/MainLayout";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 import { RandomImage } from "../components/RandomImage";
 
-const RATIOS = ["1:1", "3:4", "2:3", "4:5"];
-
 export default function GridPage() {
   return (
-    <PageStructure>
+    <MainLayout>
       <Container>
         <BigTitle>Bootstrap Grid</BigTitle>
         <Heading1>1. Flexible-size images gallery</Heading1>
@@ -59,6 +57,6 @@ export default function GridPage() {
           ))}
         </Row>
       </Container>
-    </PageStructure>
+    </MainLayout>
   );
 }
