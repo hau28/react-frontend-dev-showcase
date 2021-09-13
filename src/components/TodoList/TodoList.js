@@ -5,6 +5,7 @@ import TodoItem from "./TodoItem";
 
 export default function TodoList() {
   const todoList = useSelector((state) => state.todos);
+  const uncheckedCount = todoList.filter((todo) => !todo.checked).length;
   return (
     <div
       style={{
@@ -14,7 +15,7 @@ export default function TodoList() {
         overflow: "hidden",
       }}
     >
-      <Heading2>Your todos</Heading2>
+      <Heading2 data-testid="heading">{`Your todos (${uncheckedCount})`}</Heading2>
       <div
         style={{
           overflow: "auto",

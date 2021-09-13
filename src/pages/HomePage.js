@@ -45,7 +45,11 @@ export default function HomePage() {
       <Container>
         <div className="card-list">
           {CARDS.map((card, index) => (
-            <HomePageCard {...card} key={index} />
+            <HomePageCard
+              {...card}
+              key={index}
+              className={index === CARDS.length - 1 ? "mb-0" : "mb-5"}
+            />
           ))}
         </div>
       </Container>

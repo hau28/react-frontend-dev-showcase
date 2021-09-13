@@ -3,12 +3,14 @@ import "./index.css";
 import "../styles/main.css";
 import { GithubOutlined } from "@ant-design/icons";
 
-export default function MainLayout({ children }) {
+export default function MainLayout({ children, footerClass }) {
   return (
-    <div className="main-layout">
+    <div className="main-layout" data-testid="main-layout">
       <Navbar expand="md" className="navbar">
         <Container>
-          <Navbar.Brand href="/">FrontendShowcase</Navbar.Brand>
+          <Navbar.Brand data-testid="navbar-brand" href="/">
+            FrontendShowcase
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
@@ -22,9 +24,9 @@ export default function MainLayout({ children }) {
         </Container>
       </Navbar>
       {children}
-      <foorter>
-        <Container>
-          <div className="footer">
+      <footer className={`${footerClass}`}>
+        <Container className={`footer-container`}>
+          <div className="footer-content">
             <div className="footer-left">
               <h4>What's this?</h4>
               <p>
@@ -45,7 +47,7 @@ export default function MainLayout({ children }) {
             </a>
           </div>
         </Container>
-      </foorter>
+      </footer>
     </div>
   );
 }

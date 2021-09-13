@@ -5,7 +5,7 @@ import "../styles/SassPage.css";
 
 export default function SassPage() {
   return (
-    <MainLayout>
+    <MainLayout footerClass="bg-white">
       <main className="sass-page">
         <Container className="container">
           <h1>Our pricing</h1>

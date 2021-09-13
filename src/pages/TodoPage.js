@@ -10,7 +10,7 @@ import {
 } from "../components/Styled";
 import MainLayout from "../components/MainLayout";
 
-const todoListStore = createStore(todoListReducer);
+export const todoListStore = createStore(todoListReducer);
 
 export default function TodoPage() {
   return (

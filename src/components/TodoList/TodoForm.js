@@ -64,6 +64,7 @@ export default function TodoForm() {
         onChange={handleChangeInput}
         required
         onKeyPress={handleEnterTodo}
+        data-testid="todo-input"
       />
       <Row>
         <OutlinedBox marginBottom="0">
@@ -77,9 +78,15 @@ export default function TodoForm() {
             placeholder="Add tag"
             onChange={handleChangeInput}
             onKeyPress={handleEnterTag}
+            data-testid="tag-input"
           />
         </OutlinedBox>
-        <Button type="submit" margin="0 0 0 0.75rem" padding="0 2rem">
+        <Button
+          type="submit"
+          margin="0 0 0 0.75rem"
+          padding="0 2rem"
+          data-testid="add-button"
+        >
           Add
         </Button>
       </Row>
