@@ -46,6 +46,21 @@ test("change tag value correctly", () => {
   expect(tagInputEl.value).toBe("new tag");
 });
 
+test("pressing enter adds tag", () => {
+  const tagInputEl = getByTestId("tag-input");
+  fireEvent.change(tagInputEl, {
+    target: {
+      value: "new tag",
+    },
+  });
+  fireEvent.keyPress(tagInputEl, {
+    key: "Enter",
+    keyCode: 13,
+  });
+  const newTag = getByTestId("new tag");
+  expect(newTag).toHaveTextContent("new tag");
+});
+
 test("adding tag resets tag input", () => {
   const tagInputEl = getByTestId("tag-input");
   fireEvent.change(tagInputEl, {

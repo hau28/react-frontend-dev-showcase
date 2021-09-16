@@ -31,6 +31,13 @@ const CARDS = [
       "https://og-image-react-egghead.now.sh/topic/scss?orientation=landscape&v=20201104",
     href: "/sass",
   },
+  {
+    title: "Axios Practice",
+    desc: "Make simple AJAX requests with axios.",
+    imgSrc:
+      "https://www.adyen.com/dam/jcr:3b123375-e31b-452d-ab3f-9d68bc906ff5/ai-header.jpg",
+    href: "/axios",
+  },
 ];
 
 export default function HomePage() {

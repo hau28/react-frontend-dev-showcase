@@ -1,7 +1,7 @@
 import { TagContainer } from "../Styled";
 import { CloseOutlined } from "@ant-design/icons";
 
-export default function Tag({ title, onClick, lock }) {
+export default function Tag({ title, onClick, lock, dataTestid }) {
   return (
     <TagContainer
       onClick={(e) => {
@@ -11,7 +11,7 @@ export default function Tag({ title, onClick, lock }) {
         }
       }}
     >
-      <span>{title}</span>
+      <span data-testid={dataTestid}>{title}</span>
       {!lock && <CloseOutlined style={{ marginLeft: 4 }} />}
     </TagContainer>
   );

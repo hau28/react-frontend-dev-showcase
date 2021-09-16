@@ -1,7 +1,7 @@
 import MainLayout from "../components/MainLayout";
 import { Container } from "react-bootstrap";
 import PriceCard from "../components/SassDemo/PriceCard";
-import "../styles/SassPage.css";
+import "../styles/SassPage.scss";
 
 export default function SassPage() {
   return (

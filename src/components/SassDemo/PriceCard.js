@@ -1,4 +1,4 @@
-import "./PriceCard.css";
+import "./PriceCard.scss";
 
 export default function PriceCard({ centerCard, title, price, features = [] }) {
   const centerCardClass = (name) =>

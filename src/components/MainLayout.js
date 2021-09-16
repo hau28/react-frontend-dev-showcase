@@ -1,6 +1,6 @@
 import { Container, Navbar, Nav } from "react-bootstrap";
 import "./index.css";
-import "../styles/main.css";
+import "../styles/main.scss";
 import { GithubOutlined } from "@ant-design/icons";
 
 export default function MainLayout({ children, footerClass }) {
@@ -19,11 +19,12 @@ export default function MainLayout({ children, footerClass }) {
               <Nav.Link href="/flexbox">Flexbox</Nav.Link>
               <Nav.Link href="/grid">Bootstrap Grid</Nav.Link>
               <Nav.Link href="/sass">Sass</Nav.Link>
+              <Nav.Link href="/axios">Axios</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {children}
+      <div className="main-layout-children">{children}</div>
       <footer className={`${footerClass}`}>
         <Container className={`footer-container`}>
           <div className="footer-content">

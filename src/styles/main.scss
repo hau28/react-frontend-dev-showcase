@@ -1,5 +1,9 @@
 @import "./mixins";
 
+.main-layout-children {
+  min-height: calc(100vh - 60px);
+}
+
 footer {
   background-color: whitesmoke;
   .footer-content {

@@ -9,6 +9,7 @@ import FlexboxPage from "./pages/FlexboxPage";
 import TodoPage from "./pages/TodoPage";
 import GridPage from "./pages/GridPage";
 import SassPage from "./pages/SassPage";
+import AxiosPage from "./pages/AxiosPage";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/sass">
           <SassPage />
+        </Route>
+        <Route path="/axios">
+          <AxiosPage />
         </Route>
         <Redirect to="/" />
       </Switch>
